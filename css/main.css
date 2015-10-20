@@ -1,0 +1,227 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background:#383535;
+	
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+	
+}
+
+.list-header {
+	width: 100%;
+	margin-top: 8em;
+}
+
+.list-header > h1 {
+	text-align: center;
+	font-size: 3em;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	}
+
+
+.intro-screen{
+	text-align: center;
+	display:none;
+	
+	
+}
+
+h3{
+	color: white;
+	font-size: 1.3em;
+	margin-top:2.5em;
+	font-weight: 300;
+}
+
+.get-started {
+	border-radius: 15px;
+    background: #8AC007;
+    height: 40px;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+    width: 190px;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #383535;
+
+}
+
+
+
+.quiz-box {
+	border: 3px solid #ffff4d;
+	border-radius: 15px;
+ 	padding-left: 1em;
+   	margin-top:  -1em;
+   
+   	
+   	
+
+}
+
+.quiz-box h2{
+	color: white;
+	font-weight: 600;
+	font-size: 1.5em;
+	text-align: center;
+
+}
+
+#add-new {
+	width: 100%;
+	text-align: center;
+
+
+}
+
+input {
+	font-size: 1.2em;
+
+	
+}
+
+button {
+	color:#ff7c6b;
+}
+
+
+#list {
+	list-style: none;
+	
+}
+
+
+.cat-button {
+	background: url(../images/cat-button.png);
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-top: .2em;
+	box-sizing: border-box;
+	
+
+}
+
+.answer{
+	margin-bottom: 1em;
+
+}
+
+
+
+p {
+	text-align: left;
+	color: #8f8f8f;
+	font-size: 1.1em;
+	display: inline;
+	line-height: 2.6em;	
+	padding-left: 1em;
+
+}
+
+#under-quiz{
+	margin-top: 15px;
+	
+	
+}
+
+.question-count {
+	float: left;
+	width: 40%;
+	display: inline-block;
+	color: #8AC007;
+	font-weight: 600;
+	font-size: 1.2em;
+	padding-left: .3em;
+	box-sizing: border-box;
+}
+
+
+.submit {
+
+	border-radius: 15px;
+    background: #8AC007;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    float: left;
+    width: 20%;
+    display: inline-block;
+    padding-top: 10px;
+
+    /* styles to assist with debugging */
+    box-sizing: border-box;
+}
+
+.new-game {
+	float: left;
+	width: 40%;
+	display: inline-block;
+	padding-left: 6em;
+	box-sizing: border-box;
+	color: #8AC007;
+	font-weight: 600;
+	font-size: 1.2em;
+
+}
+
+.results-screen{
+	border: 3px solid #ffff4d;
+	border-radius: 15px;
+ 	padding-left: 1em;
+   	margin-top:  -1em;
+   	color: white;
+   	text-align: center;
+   	display: none;
+
+}
+
+.result > h1{
+	font-size: 3.5em;
+}
+
+.correct-answer{
+	margin-top: -2em;
+	color: white;
+	
+}
+
+.correct-answer >p{
+	color:white;
+
+}
+
+.results-screen > img{
+
+	padding-right: 1.2em;
+	margin-bottom:1em;
+}
+
+
+
+.checked-button{
+	float:right;
+	width:40px;
+	height:40px;
+	background: url(../images/checked-button.png);
+	background-repeat: no-repeat;
+	margin-top:.3em;
+	display: none;
+	
+	
+}
+
+.show {
+	display: inline;
+}
