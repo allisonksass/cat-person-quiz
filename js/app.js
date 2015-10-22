@@ -35,12 +35,43 @@ $(document).ready(function(){
 	var currentQuestion= 0;
 	var numCorrect = 0;
 
+
+
+	//Getting the answer
+
+
+     $("#quiz-answers").on('click','li', function () {
+
+        	$(this).children('.box').toggleClass('checked');
+
+        	var selectedAnswer= $(this).children('input').attr('value');
+        	alert(selectedAnswer);
+
+        $("#submit").on("click",function () {
+			
+          	if (selectedAnswer == quizQuestions[currentQuestion].correctAnswer)
+        	{
+                console.log("Correct!");
+                numCorrect++;
+             
+        }
+
+        	else
+        	{
+                console.log("Wrong");
+                
+        };
+    });
+
+    });
+
+
 	
 
 
 
 	//Click on homepage to start quiz
-    $("#get-started").on("click", function () {
+    $("#get-started").on("click", function (event) {
         $("#intro-screen").hide();
         $('#quiz-box').show();
         $('#under-quiz').show();
@@ -54,42 +85,28 @@ $(document).ready(function(){
         $("#quiz-box .question").html('<h2>'+quizQuestions[currentQuestion].question+'</h2>');
 
         //show answers
-        $("#quiz-answers .answer-a").html('<div class="box"><div class="cat-button"> </div> </div><p>'+quizQuestions[currentQuestion].choices[0]+'</p>');
-        $("#quiz-answers .answer-b").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[1]+'</p>');
-        $("#quiz-answers .answer-c").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[2]+'</p>');
-        $("#quiz-answers .answer-d").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[3]+'</p>');
+        $("#quiz-answers .answer-a").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="0"><p>'+quizQuestions[currentQuestion].choices[0]+'</p>');
+        $("#quiz-answers .answer-b").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="1"><p>'+quizQuestions[currentQuestion].choices[1]+'</p>');
+        $("#quiz-answers .answer-c").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="2"><p>'+quizQuestions[currentQuestion].choices[2]+'</p>');
+        $("#quiz-answers .answer-d").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="3"><p>'+quizQuestions[currentQuestion].choices[3]+'</p>');
 
         questionNumber();
 
 
-        //defining the correct answer
-        $(".answer-a").on('click', function () {
-        	//alert ("This works");
-        // var selectedAnswer = $(this).children('.');
-        // var correctAnswer = quizQuestions[currentQuestion].correctAnswer;
-
-         $(this).children('.box').toggleClass('checked');
-       
-       
-         
-
-  
-            
-        // if (selectedAnswer == correctAnswer) {
-        //     alert("Correct!");
-        //     numCorrect++;
-        // } else {
-        //     alert ("Wrong!");
-        // }
+        //getting their answer correct answer
+        	
+        
 
    });
     
-    });
+ 
 
 
     //Pressing submit button to load next question
     
-    $("#submit").on("click",function () {
+    $("#submit").on("click",function (event) {
+
+    	
 
     	if (currentQuestion < 4) {
         currentQuestion++;
@@ -99,6 +116,9 @@ $(document).ready(function(){
         $("#quiz-answers .answer-b").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[1]+'</p>');
         $("#quiz-answers .answer-c").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[2]+'</p>');
         $("#quiz-answers .answer-d").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[3]+'</p>');
+
+//!put function testing the answers within the if statement here!
+
 
     }
 
@@ -117,6 +137,7 @@ $(document).ready(function(){
 
 
 
+    
 
 
     });
@@ -125,28 +146,29 @@ $(document).ready(function(){
 
 
 
+//STARTING NEW GAME
 
-//check for right answer
+ $('#new-game').on('click', function(){
+        startNewGame();
+    });
 
+  function startNewGame () {
+  	var currentQuestion= 0;
+  	var numberCorrect=0
+	$('#quiz-box').show();
+	$('#count').html(0);
 
+  	$("#quiz-box .question").html('<h2>'+quizQuestions[currentQuestion].question+'</h2>');
 
-// function answerCheck() {
-//         var answer = $("input[type='radio']:checked").val();
-//         if (answer == "") {
-//                 alert('Please select an answer');
-//         }else if (answer == quizQuestions[currentQuestion].correctAnswer){
-//                 console.log("Correct!");
-//                 numberCorrect++;
-             
-//         }
+        //show answers
+        $("#quiz-answers .answer-a").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="0"><p>'+quizQuestions[currentQuestion].choices[0]+'</p>');
+        $("#quiz-answers .answer-b").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="1"><p>'+quizQuestions[currentQuestion].choices[1]+'</p>');
+        $("#quiz-answers .answer-c").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="2"><p>'+quizQuestions[currentQuestion].choices[2]+'</p>');
+        $("#quiz-answers .answer-d").html('<div class="box"><div class="cat-button"> </div> </div><input type="hidden" value="3"><p>'+quizQuestions[currentQuestion].choices[3]+'</p>');
 
-//         else{
-//                 console.log("Wrong");
-                
-//         };
-//     }
+        questionNumber();
 
-
+  	}
 
     
 

@@ -32,24 +32,24 @@
 		<div class="question"> <h2> How many hours do cats sleep per day? </h2>
 		</div>
 
-		<div id="quiz-answers">
-			<div class="answer-a">
-				<div class="box"> <div class="cat-button"> </div></div> <p>22 hours per day</p>
-			</div>
+		<ul id="quiz-answers">
+			<li class="answer-a">
+				<div class="box"> <div class="cat-button"> </div><input type="hidden" value="0"></div> <p>22 hours per day</p>
+			</li>
 
-			<div class="answer-b">
-					<div class="cat-button"> </div> <p>12 hours per day</p>		
-			</div>
+			<li class="answer-b">
+					<div class="cat-button"> </div> <input type="hidden" value="1"><p>12 hours per day</p>		
+			</li>
 
-			<div class="answer-c">
-					<div class="cat-button"> </div> <p> 5 hours per day</p>
-			</div>
+			<li class="answer-c">
+					<div class="cat-button"> </div> <input type="hidden" value="2"><p> 5 hours per day</p>
+			</li>
 
-			<div class="answer-d">
-					<div class="cat-button"> </div> <p>18 hours per day</p>
-			</div>
+			<li class="answer-d">
+					<div class="cat-button"> </div> <input type="hidden" value="3"><p>18 hours per day</p>
+			</li>
 	
-		</div>
+		</ul>
 
 	</div>
 
@@ -60,7 +60,7 @@
 		</div>
 
 		<div class="correct-answer">
-			<p>You answered 5/5 questions correctly!</p>
+			<p>You answered <span id="correct-answers">5</span>/5 questions correctly!</p>
 			</div>
 			<img width="200px" height="200px" src="images/kitty-stretch.png" alt="Cat Person Quiz">
 			<img width="280px" height="200px" src="images/kitty-walk.png" alt="Cat Person Quiz">
