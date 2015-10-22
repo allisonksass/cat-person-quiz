@@ -27,9 +27,9 @@ h1 {
 	}
 
 
-.intro-screen{
+#intro-screen{
 	text-align: center;
-	display:none;
+	
 	
 	
 }
@@ -41,7 +41,7 @@ h3{
 	font-weight: 300;
 }
 
-.get-started {
+#get-started {
 	border-radius: 15px;
     background: #8AC007;
     height: 40px;
@@ -57,18 +57,18 @@ h3{
 
 
 
-.quiz-box {
+#quiz-box {
 	border: 3px solid #ffff4d;
 	border-radius: 15px;
  	padding-left: 1em;
    	margin-top:  -1em;
-   
+   	display:none;
    	
    	
 
 }
 
-.quiz-box h2{
+#quiz-box h2{
 	color: white;
 	font-weight: 600;
 	font-size: 1.5em;
@@ -94,15 +94,12 @@ button {
 }
 
 
-#list {
-	list-style: none;
-	
-}
+
 
 
 .cat-button {
 	background: url(../images/cat-button.png);
-	height: 50px;
+	height: 42px;
 	width: 50px;
 	background-repeat: no-repeat;
 	float: left;
@@ -112,7 +109,7 @@ button {
 
 }
 
-.answer{
+.answer-a .answer-b .answer-c .answer-d{
 	margin-bottom: 1em;
 
 }
@@ -131,6 +128,7 @@ p {
 
 #under-quiz{
 	margin-top: 15px;
+	display:none;
 	
 	
 }
@@ -147,7 +145,7 @@ p {
 }
 
 
-.submit {
+#submit {
 
 	border-radius: 15px;
     background: #8AC007;
@@ -176,7 +174,7 @@ p {
 
 }
 
-.results-screen{
+#results-screen{
 	border: 3px solid #ffff4d;
 	border-radius: 15px;
  	padding-left: 1em;
