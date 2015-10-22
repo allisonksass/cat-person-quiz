@@ -34,6 +34,7 @@ $(document).ready(function(){
 	//Variables
 	var currentQuestion= 0;
 	var numCorrect = 0;
+
 	
 
 
@@ -46,9 +47,6 @@ $(document).ready(function(){
         //loadQuestion();
         //imgChange();
         event.preventDefault();
-
-        //defining correct choice
-        //var correctChoice = quizQuestions[0].correctAnswer;
         
         
 		
@@ -56,12 +54,35 @@ $(document).ready(function(){
         $("#quiz-box .question").html('<h2>'+quizQuestions[currentQuestion].question+'</h2>');
 
         //show answers
-        $("#quiz-answers .answer-a").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[0]+'</p>');
+        $("#quiz-answers .answer-a").html('<div class="box"><div class="cat-button"> </div> </div><p>'+quizQuestions[currentQuestion].choices[0]+'</p>');
         $("#quiz-answers .answer-b").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[1]+'</p>');
         $("#quiz-answers .answer-c").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[2]+'</p>');
         $("#quiz-answers .answer-d").html('<div class="cat-button"> </div> <p>'+quizQuestions[currentQuestion].choices[3]+'</p>');
 
         questionNumber();
+
+
+        //defining the correct answer
+        $(".answer-a").on('click', function () {
+        	//alert ("This works");
+        // var selectedAnswer = $(this).children('.');
+        // var correctAnswer = quizQuestions[currentQuestion].correctAnswer;
+
+         $(this).children('.box').toggleClass('checked');
+       
+       
+         
+
+  
+            
+        // if (selectedAnswer == correctAnswer) {
+        //     alert("Correct!");
+        //     numCorrect++;
+        // } else {
+        //     alert ("Wrong!");
+        // }
+
+   });
     
     });
 
@@ -84,35 +105,50 @@ $(document).ready(function(){
     	else {
     		$('#quiz-box').hide();
 			$('#results-screen').show();
+			$('#question-count').hide();
+			$('#submit').hide();
+
 
     	}
 
   		questionNumber();
         event.preventDefault();
+
+
+
+
+
+
     });
+
+
+
+
+
 
 //check for right answer
 
-function answerCheck() {
-        var answer = $("input[type='radio']:checked").val();
-        if (answer == "") {
-                alert('Please select an answer');
-        }else if (answer == questions[currentQuestion].correctAnswer){
-                console.log("Correct!");
-                numberCorrect++;
+
+
+// function answerCheck() {
+//         var answer = $("input[type='radio']:checked").val();
+//         if (answer == "") {
+//                 alert('Please select an answer');
+//         }else if (answer == quizQuestions[currentQuestion].correctAnswer){
+//                 console.log("Correct!");
+//                 numberCorrect++;
              
-        }else{
-                console.log("Wrong");
+//         }
+
+//         else{
+//                 console.log("Wrong");
                 
-        };
-    }
+//         };
+//     }
+
+
 
     
-
-
-
-
-
 
 	//Keep track of question number
 	function questionNumber() {
@@ -120,17 +156,22 @@ function answerCheck() {
 
 	}
 
+     //defining the correct answer
+   //      $("#quiz-answers").on('click', function () {
+   //      var selectedAnswer = $(this).children('#quiz-answers');
+   //      var correctAnswer = quizQuestions[currentQuestion].correctAnswer;
 
+   //      $(this).children('.cat-button').toggleClass('checked');
+            
+   //      if (selectedAnswer == correctAnswer) {
+   //          alert("Correct!");
+   //          numCorrect++;
+   //      } else {
+   //          alert ("Wrong!");
+   //      }
 
-	//Load question and choices
-	// function loadQuestion() {
-	// 	$quiz.empty();
-	// 	$answers.empty();
-	// 	$quiz.append('<p>' + allQuestions[currentQuestion].question + '</p>');
-	// 	for (var i = 0; i <= 3; i++) {
-	// 		document.getElementById('answers').innerHTML += '<input type="radio" name="choice" value='+i+'>' + allQuestions[currentQuestion].choices[i] + '<br/>';
-	// 	}
-	// }
+   // });
+
 	
 
 
