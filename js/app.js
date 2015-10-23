@@ -43,6 +43,8 @@ $(document).ready(function(){
 
     $("#quiz-answers").on('click','li', function () {
 
+
+			$('.box').not(this).removeClass('checked'); 
         	$(this).children('.box').toggleClass('checked');
 
         	selectedAnswer= $(this).children('input').attr('value');
