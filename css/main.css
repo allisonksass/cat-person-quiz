@@ -1,6 +1,8 @@
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background:#383535;
+	
 	
 }
 
@@ -31,7 +33,6 @@ h1 {
 	text-align: center;
 	
 	
-	
 }
 
 h3{
@@ -52,7 +53,7 @@ h3{
     margin: 0 auto;
     padding-top: 10px;
     color: #383535;
-     cursor: pointer;
+    cursor: pointer;
 
 }
 
@@ -67,11 +68,10 @@ h3{
 	border-radius: 15px;
  	padding-left: 1em;
    	margin-top:  -1em;
-   	display:none;
-   	
-   	
+   	display:none;  	
 
 }
+
 
 #quiz-box h2{
 	color: white;
@@ -101,8 +101,7 @@ button {
 
 .box{
 	float:left;
-	
-	
+
 
 }
 
@@ -163,6 +162,7 @@ ul li{
 	display:none;
 	
 	
+	
 }
 
 #question-count {
@@ -190,9 +190,8 @@ ul li{
     display: inline-block;
     padding-top: 10px;
     cursor: pointer;
-
-    /* styles to assist with debugging */
-    box-sizing: border-box;
+	box-sizing: border-box; 
+   
 }
 
 #submit:hover{
@@ -217,6 +216,28 @@ ul li{
 	color:#FC987E;
 
 }
+
+
+#display-correct {
+	text-align: center;
+	width:100%;
+	margin-top: 3em;
+	color: white;
+	display: none;
+
+}
+
+#display-wrong {
+	text-align: center;
+	width:100%;
+	margin-top: 3em;
+	color: white;
+	display: none;
+
+}
+
+
+
 
 #results-screen{
 	border: 3px solid #ffff4d;
@@ -251,9 +272,3 @@ ul li{
 }
 
 
-
-
-
-.show {
-	display: inline;
-}
